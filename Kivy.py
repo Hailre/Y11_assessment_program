@@ -10,15 +10,21 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 
 
 # Define Different Screens
+class WindowManager(ScreenManager):
+    pass
+
+
 class FirstWindow(Screen):
+    pass
+
+# Create a Label to display the text.
+# Open the file, read the file into a variable.
+# Set the text attribute of the Label to the variable.
+class LoadPrevious(Screen):
     pass
 
 
 class SecondWindow(Screen):
-    pass
-
-
-class WindowManager(ScreenManager):
     pass
 
 
