@@ -90,15 +90,21 @@ WindowManager:
                 size_hint: 0.4, 0.12
                 id: hint
                 multiline: False
-                password: True
                 font_size: (root.width**2 + root.height**2) / 14**4
 
+    Button:
+        pos_hint:{"x":0.5,"y":0.12}
+        size_hint: 0.4, 0.10
+        text: "Submit"
+        font_size: 32
+        on_release:
+            app.get_text_inputs()
 
-        Button:
-            pos_hint:{"x":0.2,"y":0.05}
-            size_hint: 0.6, 0.15
-            text: "Submit"
-            font_size: (root.width**2 + root.height**2) / 14**4
-            on_release:
-                root.manager.transition.direction = "left"
-                root.submit()
+    Button:
+        text: "Cancel"
+        pos_hint:{"x":0.05,"y":0.12}
+        size_hint: 0.4, 0.10
+        font_size: 32
+        on_release:
+            app.root.current = "menu"
+            root.manager.transition.direction = "right"

@@ -4,9 +4,9 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.widget import Widget
 from kivy.uix.button import Button
 from kivy.uix.textinput import TextInput
-from kivy.properties import ObjectProperty
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.properties import ObjectProperty, ListProperty
 
 
 # Define Different Screens
@@ -33,6 +33,11 @@ kv = Builder.load_file('flashcard_application.kv')
 
 
 class FlashcardApplication(App):
+    def get_text_inputs(self):
+        my_list = [self.root.ids.first_input_id.text, self.root.ids.second_input_id.text]
+        print(my_list)
+    pass
+
     def build(self):
         return kv
 
